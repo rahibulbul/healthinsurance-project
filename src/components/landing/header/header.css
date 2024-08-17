@@ -1,0 +1,87 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    padding: 50px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 30px 100px;
+    background: #fff;
+    box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);
+}
+
+header .header-logo-link {
+    position: relative;
+    font-weight: 800;
+    color: #696969;
+    font-size: 40px;
+    letter-spacing: 5px;
+    transition: 0.5s;
+    font-family: var(--font-Roboto);
+    text-decoration: none;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+}
+
+header ul li .nav-link {
+    position: relative;
+    margin: 0 15px;
+    color: #696969;
+    letter-spacing: 2px;
+    font-family: var(--font-Montserrat);
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: 15px;
+    padding: 0px 8px;
+    text-transform: uppercase;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #696969;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.5s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+    background-color: black;
+}
+
+header ul li .nav-link:hover {
+    color: black;
+    font-family: 900;
+}
+
+header .header-logo-link:hover {
+    color: black;
+}
+
+header ul li .active {
+    color: black;
+}
+
+header ul li .active:after {
+    width: 100%;
+    background-color: black;
+}
