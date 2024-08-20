@@ -8,31 +8,18 @@ import {
 import ScrollToTop from "./ScrollToTop";
 
 // Main Page
-import Home from "./pages/landing/home/Home";
-// import About from "./components/main/about/About";
-// import Services from "./components/main/services/Services";
-// import GetQuote from "./components/main/get-quote/GetQuote";
-// import Payment from "./components/main/payment/Payment";
-// import Shop from "./components/main/shop/Shop";
-// import Header from "./components/main/header/Header";
-// import Footer from "./components/main/footer/Footer";
-// import Login from "./components/main/login/Login";
-// import Registration from "./components/main/registration/Registration";
-// import Forgot from "./components/main/forgot/Forgot";
-// import Appointment from "./components/main/appointment/Appointment";
-// import Termsnconditions from "./components/main/termsnconditions/Termsnconditions";
-// import Registrationcomplete from "./components/main/registrationcomplete/Registrationcomplete";
+import Home from "./pages/webpage/home/Home";
+import Login from "./pages/webpage/login/Login";
+import Registration from "./pages/webpage/register/Register";
 
-// Employee Dashboard Page
-// import EmployeeDashboard from "./components/dashboard/employeedashboard/index/Index";
-
-// User Dashboard Page
+// Components
+import Header from "./components/webpage/header/Header";
 
 // Layout Components
 const MainLayout = ({ children }) => (
   <>
     <ScrollToTop />
-    {/* <Header /> */}
+    <Header />
     {children}
     {/* <Footer /> */}
   </>
@@ -41,7 +28,7 @@ const MainLayout = ({ children }) => (
 const NoFooterLayout = ({ children }) => (
   <>
     <ScrollToTop />
-    {/* <Header /> */}
+    <Header />
     {children}
   </>
 );
@@ -81,13 +68,14 @@ const AppRoutes = () => (
         element={<MainLayout>{/* <Payment /> */}</MainLayout>}
       />
       <Route path="/shop" element={<MainLayout>{/* <Shop /> */}</MainLayout>} />
+
       <Route
         path="/login"
-        element={<NoFooterLayout>{/* <Login /> */}</NoFooterLayout>}
+        element={<NoFooterLayout>{<Login />}</NoFooterLayout>}
       />
       <Route
         path="/registration"
-        element={<NoFooterLayout>{/* <Registration /> */}</NoFooterLayout>}
+        element={<NoFooterLayout>{<Registration />}</NoFooterLayout>}
       />
       <Route
         path="/forgot-password"

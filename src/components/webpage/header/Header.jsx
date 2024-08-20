@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
-
 const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -21,38 +20,48 @@ const Header = () => {
   }, []);
   return (
     <header className="header">
-      <Link to="/" className="header-logo-link">
-        prime
+      <Link to="" className="header-logo">
+        Square
       </Link>
       <ul>
         <li>
-          <Link to="/" className="nav-link">
+          <Link to="#" className="nav-link nav-active">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about" className="nav-link">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/services" className="nav-link">
+          <Link to="#" className="nav-link">
             Services
           </Link>
         </li>
         <li>
-          <Link to="/get-quote" className="nav-link">
-            Get Quote
+          <Link to="#" className="nav-link">
+            Care Home
           </Link>
         </li>
         <li>
-          <Link to="/shop" className="nav-link">
-            Shop
+          <Link to="#" className="nav-link">
+            Reward
           </Link>
         </li>
         <li>
-          <Link to="/Login" className="nav-link">
+          <Link to="#" className="nav-link">
+            Support
+          </Link>
+        </li>
+        <li>
+          <Link to="#" className="nav-link">
+            Get a quote
+          </Link>
+        </li>
+        <li>
+          <Link to="/login" className="nav-link">
             Login
+          </Link>
+        </li>
+        <li>
+          <Link to="#" className="nav-link">
+            User
           </Link>
         </li>
       </ul>

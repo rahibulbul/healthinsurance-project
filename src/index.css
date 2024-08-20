@@ -10,6 +10,7 @@
     --color-light-black: #414141;
     --color-dark: #4b4a53;
     --color-info-dark: #7d8da1;
+    --color-text-soft: #898989;
     --color-span: crimson;
 
     --color-green: #006a4e;
@@ -46,6 +47,8 @@
     --box-shadow-prime: 0px 8px 24px 0px rgba(140, 149, 159, 0.2);
     --box-shadow-border: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
     --box-shadow-normal: 0px 5px 15px 0px rgba(255, 255, 255, 0.3);
+    --box-shadow-btn: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+
 
     --container-width-lg: 82%;
     --container-width-md: 90%;
@@ -73,6 +76,20 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: var(--font-Montserrat);
+}
+
+body {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.container {
+    padding: 120px 100px 0px 100px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .debug-screen::before {
@@ -108,18 +125,26 @@
 
 @media (min-width: 1280px) {
     .debug-screen::before {
-        content: "xl";
+        content: "720p";
     }
 }
 
+
 @media (min-width: 1536px) {
     .debug-screen::before {
-        content: "2xl";
+        content: "950p";
     }
 }
+
 
 @media (min-width: 1920px) {
     .debug-screen::before {
         content: "1080p";
+    }
+}
+
+@media (min-width: 2048px) {
+    .debug-screen::before {
+        content: "2K";
     }
 }
