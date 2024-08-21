@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import EmployeeSidebar from "../../../../components/dashboard/employee/sidebar/Sidebar";
+<!-- employee dashboard base -->
 
+import React from "react";
+import EmployeeSidebar from "../../../../components/dashboard/employee/sidebar/Sidebar";
+import EmployeeHeader from "../../../../components/dashboard/employee/header/Header";
 import "./style.css";
 
 const Home = () => {
@@ -10,8 +12,10 @@ return (
 <EmployeeSidebar />
 </div>
 <div className="emp-container">
-<p className="right">right</p>
-<p className="left">left</p>
+<div className="emp-base-header">
+<EmployeeHeader />
+</div>
+<div className="emp-base-main emp-home"></div>
 </div>
 </div>
 );
