@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/healthcare-project/static/css/main.d3aa67c9.css",
-    "main.js": "/healthcare-project/static/js/main.8232d08b.js",
-    "static/media/user.png": "/healthcare-project/static/media/user.e378fcb84e12836cd6c3.png",
-    "index.html": "/healthcare-project/index.html",
-    "main.d3aa67c9.css.map": "/healthcare-project/static/css/main.d3aa67c9.css.map",
-    "main.8232d08b.js.map": "/healthcare-project/static/js/main.8232d08b.js.map"
+    "main.css": "/healthinsurance-project/static/css/main.d3aa67c9.css",
+    "main.js": "/healthinsurance-project/static/js/main.e0d9858d.js",
+    "static/media/user.png": "/healthinsurance-project/static/media/user.e378fcb84e12836cd6c3.png",
+    "index.html": "/healthinsurance-project/index.html",
+    "main.d3aa67c9.css.map": "/healthinsurance-project/static/css/main.d3aa67c9.css.map",
+    "main.e0d9858d.js.map": "/healthinsurance-project/static/js/main.e0d9858d.js.map"
   },
   "entrypoints": [
     "static/css/main.d3aa67c9.css",
-    "static/js/main.8232d08b.js"
+    "static/js/main.e0d9858d.js"
   ]
 }
