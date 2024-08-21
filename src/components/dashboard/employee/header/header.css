@@ -49,6 +49,8 @@
 }
 
 .emp-header-button {
+    position: relative;
+
     button {
         border: solid 2px #708090;
         border-radius: 50%;
@@ -71,8 +73,8 @@
 
     span {
         position: absolute;
-        right: 77px;
-        top: 10px;
+        right: -10px;
+        top: -5px;
         background-color: red;
         color: white;
         border-radius: 50%;
@@ -92,6 +94,7 @@
     top: 52px;
     box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
     overflow: auto;
+    z-index: 1111;
 
     .notification-header {
         height: 40px;
@@ -157,6 +160,7 @@
         top: 52px;
         box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
         overflow: auto;
+        z-index: 11111;
 
         .user-details {
             display: flex;

@@ -100,7 +100,8 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    background-color: #c9e0ed;
+    /* background-color: #c9e0ed; */
+    background-color: #ccdde6;
 
     .emp-base-sidebar {
         width: 300px;
