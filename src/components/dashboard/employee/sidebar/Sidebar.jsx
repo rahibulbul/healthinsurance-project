@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
+  const location = useLocation();
   return (
     <aside className="emp-sidebar">
       <div className="emp-sidebar-content">
@@ -14,13 +15,27 @@ const Sidebar = () => {
             </Link>
           </div>
           <li>
-            <Link to="#" className="emp-links">
+            <Link
+              to="/employeedashboard"
+              className={`emp-links ${
+                location.pathname === "/employeedashboard"
+                  ? "emp-sidebar-active"
+                  : ""
+              }`}
+            >
               <i class="icon ph-bold ph-house-simple"></i>
               Overview
             </Link>
           </li>
           <li>
-            <Link to="#" className="emp-links">
+            <Link
+              to="/employeedashboard/insurance"
+              className={`emp-links ${
+                location.pathname === "/employeedashboard/insurance"
+                  ? "emp-sidebar-active"
+                  : ""
+              }`}
+            >
               <i class="ph ph-umbrella-simple"></i>
               Insurance
             </Link>

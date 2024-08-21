@@ -113,6 +113,11 @@ body {
     .emp-container {
         width: 100vw;
         height: 100vh;
+
+        .emp-base-header {
+            height: 60px;
+            width: 100%;
+        }
     }
 }
 

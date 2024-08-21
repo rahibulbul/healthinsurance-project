@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import EmployeeSidebar from "../../../../components/dashboard/employee/sidebar/Sidebar";
 import EmployeeHeader from "../../../../components/dashboard/employee/header/Header";
-import "./style.css";
+import "./insurance.css";
 
-const Home = () => {
+const Insurance = () => {
   return (
     <div className="emp-base">
       <div className="emp-base-sidebar">
@@ -19,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Insurance;

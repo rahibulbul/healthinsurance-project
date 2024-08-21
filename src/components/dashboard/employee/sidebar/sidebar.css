@@ -52,10 +52,19 @@
                 font-size: 16px;
                 font-weight: 600;
                 color: #696969;
-                transition: 0.6s;
+                text-decoration: none;
+                transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+                    border-left-color 0.2s ease-in-out;
                 border-left: solid 5px transparent;
                 margin-left: 10px;
                 cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+                    background: #c9e0ed;
+                    color: black;
+                    border-left: solid 5px #696969;
+                }
 
                 i {
                     font-size: 20px;
@@ -63,13 +72,20 @@
                     transition: 0.6s;
                 }
             }
+
+            .emp-sidebar-active {
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+                background: #c9e0ed;
+                color: black;
+                border-left: solid 5px #696969;
+            }
         }
 
-        li:hover .emp-links {
+        /* li:hover .emp-links {
             box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
             background: #c9e0ed;
             color: black;
             border-left: solid 5px #696969;
-        }
+        } */
     }
 }
