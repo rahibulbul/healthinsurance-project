@@ -15,6 +15,9 @@ import Registration from "./pages/webpage/register/Register";
 // Components
 import Header from "./components/webpage/header/Header";
 
+// Employee Dashboard
+import EmployeeDashboard from "./pages/dashboard/employee/home/Home";
+
 // Layout Components
 const MainLayout = ({ children }) => (
   <>
@@ -100,7 +103,7 @@ const AppRoutes = () => (
         element={
           <DashboardLayout>
             <Routes>
-              {/* <Route index element={<EmployeeDashboard />} /> */}
+              <Route index element={<EmployeeDashboard />} />
               {/* <Route path="newinsurance" element={<NewInsurance />} />
               <Route path="insurancecategory" element={<InsuranceCategory />} />
               <Route path="insurancerecord" element={<InsuranceRecord />} />

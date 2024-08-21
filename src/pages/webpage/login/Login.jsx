@@ -22,7 +22,7 @@ const Login = () => {
     event.preventDefault();
     console.log("Username:", username);
     console.log("Password:", password);
-    navigate("/dashboard");
+    navigate("/employeedashboard");
     // Further form submission logic goes here
   };
 
