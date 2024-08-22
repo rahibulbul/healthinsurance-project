@@ -88,13 +88,24 @@ const ChartBox = (props) => {
           </ResponsiveContainer>
         </div>
         <div className="details">
-          <span className="total" style={{ color: props.color }}>
+          <span
+            className="total"
+            style={{
+              color: totalIncome < 0 ? "#d93d3d" : "#4bb592",
+            }}
+          >
             {unit}
             {totalIncome || 0}
           </span>
           <span
             className="percentage"
-            style={{ color: percentageChange < 0 ? "tomato" : "limegreen" }}
+            style={{
+              color: percentageChange < 0 ? "white" : "white",
+              backgroundColor: percentageChange < 0 ? "#d93d3d" : "#4bb592",
+              padding: "5px 10px",
+              fontSize: "13px",
+              borderRadius: "10px",
+            }}
           >
             {percentageChange.toFixed(2) || 0}%
           </span>

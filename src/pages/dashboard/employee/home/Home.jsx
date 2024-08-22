@@ -90,13 +90,14 @@ import React from "react";
 import EmployeeSidebar from "../../../../components/dashboard/employee/sidebar/Sidebar";
 import EmployeeHeader from "../../../../components/dashboard/employee/header/Header";
 import ChartBox from "../../../../components/dashboard/employee/chartBox/ChartBox";
+import AreaChart from "../../../../components/dashboard/employee/areaChart/AreaChart";
 import "./style.css";
 import {
   chartNetIncome,
   chartNetUser,
   chartNetInsurance,
   chartNetExpense,
-} from "../../../../utils/dummyChart/data"; // Assuming you have user data
+} from "../../../../utils/dummyChart/data";
 
 const Home = () => {
   return (
@@ -109,7 +110,7 @@ const Home = () => {
           <EmployeeHeader />
         </div>
         <div className="emp-base-main emp-home">
-          <div className="emp-charts">
+          <div className="emp-cards">
             <div className="emp-chart chart-1">
               <ChartBox {...chartNetIncome} unit="£" />
             </div>
@@ -122,6 +123,12 @@ const Home = () => {
             <div className="emp-chart chart-4">
               <ChartBox {...chartNetExpense} unit="£" />
             </div>
+          </div>
+          <div className="customer-rate">
+            <div className="repeat-customer-rate">
+              <AreaChart />
+            </div>
+            <div className="new-customer-rate"></div>
           </div>
         </div>
       </div>

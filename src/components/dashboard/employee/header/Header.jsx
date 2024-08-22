@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const getPageName = (pathname) => {
-    return pathMap[pathname] || "wrong page";
+    return pathMap[pathname] || "404 Page not found";
   };
 
   const createBreadcrumb = (pathname) => {
@@ -30,7 +30,7 @@ const Header = () => {
           <Link to={path} className="breadcrumb-link">
             {getPageName(path)}
           </Link>
-          {index < pathSegments.length - 1 && " / "}
+          {index < pathSegments.length - 1 && " ❯ "}
         </span>
       );
     });
@@ -100,7 +100,7 @@ const Header = () => {
     <div className="emp-header">
       <div className="emp-header-links">
         <i className="ph ph-house" onClick={handleDashboardHome}></i>
-        <span>/{breadcrumb}</span>
+        <span> ❯ {breadcrumb}</span>
       </div>
       <div className="emp-header-buttons">
         <div className="emp-header-button-notification">

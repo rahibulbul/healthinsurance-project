@@ -1,6 +1,9 @@
 // Function to generate a random number within a specified range
-const getRandomIncome = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomIncome = (min, max) => {
+  const isNegative = Math.random() < 0.5; // 50% chance to be negative
+  const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
+  return isNegative ? -randomValue : randomValue;
+};
 
 // Generate random income data
 export const chartNetIncome = {
@@ -8,7 +11,7 @@ export const chartNetIncome = {
   title: "Net Income",
   dataKey: "income",
   color: "#6193ff",
-  viewAll: "View Income",
+  viewAll: "All Income",
   timeline: {
     weekly: [
       { name: "Sun", income: getRandomIncome(300, 700) },
@@ -53,7 +56,7 @@ export const chartNetUser = {
   title: "All Users",
   dataKey: "users",
   color: "#e99b26",
-  viewAll: "View Users",
+  viewAll: "All Users",
   timeline: {
     weekly: [
       { name: "Sun", users: getRandomIncome(300, 700) },
@@ -98,7 +101,7 @@ export const chartNetInsurance = {
   title: "Net Insurance",
   dataKey: "insurance",
   color: "#4bb592",
-  viewAll: "View insurance",
+  viewAll: "All insurance",
   timeline: {
     weekly: [
       { name: "Sun", insurance: getRandomIncome(300, 700) },
@@ -142,8 +145,8 @@ export const chartNetExpense = {
   icon: "ph-clipboard-text",
   title: "Net Expense",
   dataKey: "expense",
-  color: "#d93d3d",
-  viewAll: "View expense",
+  color: "#FFBB28",
+  viewAll: "All expense",
   timeline: {
     weekly: [
       { name: "Sun", expense: getRandomIncome(300, 700) },
