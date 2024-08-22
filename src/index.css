@@ -101,7 +101,7 @@ body {
     display: flex;
     flex-direction: row;
     /* background-color: #c9e0ed; */
-    background-color: #ebf2f5;
+    background-color: #f0f4f6;
 
     .emp-base-sidebar {
         width: 300px;

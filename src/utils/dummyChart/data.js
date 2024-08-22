@@ -1,6 +1,6 @@
 // Function to generate a random number within a specified range
 const getRandomIncome = (min, max) => {
-  const isNegative = Math.random() < 0.5; // 50% chance to be negative
+  const isNegative = Math.random() < 0.2;
   const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
   return isNegative ? -randomValue : randomValue;
 };
@@ -182,6 +182,49 @@ export const chartNetExpense = {
       { name: "2021", expense: getRandomIncome(30000, 50000) },
       { name: "2022", expense: getRandomIncome(30000, 50000) },
       { name: "2023", expense: getRandomIncome(30000, 50000) },
+    ],
+  },
+};
+
+export const AreaChartRepeatCustomer = {
+  icon: "ph-users",
+  title: "Repeat Insurance Rate",
+  dataKey: "repeatUsers",
+  timeline: {
+    weekly: [
+      { name: "Sun", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Mon", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Tue", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Wed", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Thu", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Fri", repeatUsers: getRandomIncome(300, 700) },
+      { name: "Sat", repeatUsers: getRandomIncome(300, 700) },
+    ],
+    monthly: [
+      { name: "Jan", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Feb", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Mar", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Apr", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "May", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Jun", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Jul", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Aug", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Sep", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Oct", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Nov", repeatUsers: getRandomIncome(2000, 4000) },
+      { name: "Dec", repeatUsers: getRandomIncome(2000, 4000) },
+    ],
+    yearly: [
+      { name: "2014", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2015", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2016", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2017", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2018", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2019", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2020", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2021", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2022", repeatUsers: getRandomIncome(30000, 50000) },
+      { name: "2023", repeatUsers: getRandomIncome(30000, 50000) },
     ],
   },
 };
