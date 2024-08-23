@@ -148,7 +148,7 @@ const Header = () => {
             </button>
           </div>
           <div
-            className={`emp-header-message-panel ${
+            className={`emp-header-user-panel ${
               isMessageDropdownVisible ? "show" : ""
             }`}
           >
@@ -198,7 +198,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="user-settings-list">
-                  <Link to="#" className="user-settings-links">
+                  <Link to="/" className="user-settings-links">
                     <i className="icon ph-bold ph-sign-out"></i>
                     Log Out
                   </Link>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./register.css";
-import InputText from "../../../components/webpage/inputText/InputText";
-import InputPassword from "../../../components/webpage/inputPassword/InputPassword";
+import InputText from "../../../components/global/inputText/InputText";
+import InputPassword from "../../../components/global/inputPassword/InputPassword";
 
 const Register = () => {
   return (

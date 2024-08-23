@@ -1,0 +1,100 @@
+.insurance {
+    height: 100%;
+    width: 100vw;
+
+    .insurance-tabButton {
+        display: flex;
+        border-bottom: solid 1px #696969;
+        position: fixed;
+        top: 60px;
+        width: 84.4%;
+        z-index: 10;
+        background-color: #f0f4f6;
+
+        button {
+            display: block;
+            padding: 15px 35px;
+            background: transparent;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: var(--font-Jakarta);
+            transition: 0.5s;
+            color: #696969;
+
+            &:hover {
+                background-color: #c9e0ed;
+                box-shadow: 0px -20px 50px 0px rgba(0, 0, 0, 0.2);
+                color: black;
+            }
+        }
+
+        .btn-active {
+            background-color: #aad3ea;
+            box-shadow: 0px -20px 50px 0px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+    }
+
+    .insurance-tab {
+        margin-top: 20px;
+        width: 100%;
+        display: none;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .all-insurance {
+        width: 100%;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+                width: 100%;
+
+                span {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+
+            .open-file {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    background: none;
+                    padding: 10px 50px;
+                    border: solid 1px #c9e0ed;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    font-family: var(--font-poppins);
+                    transition: all 0.6s;
+                    cursor: pointer;
+                    background-color: #aad3ea;
+
+                    &:hover {
+                        background-color: #0092e7;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            margin-top: 20px;
+            background-color: transparent;
+        }
+    }
+
+    .insurance-category {}
+}

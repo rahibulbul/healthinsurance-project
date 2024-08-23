@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
-import InputText from "../../../components/webpage/inputText/InputText";
-import InputPassword from "../../../components/webpage/inputPassword/InputPassword";
-import Button from "../../../components/webpage/Inputbutton/InputButton";
+import InputText from "../../../components/global/inputText/InputText";
+import InputPassword from "../../../components/global/inputPassword/InputPassword";
+import Button from "../../../components/global/Inputbutton/InputButton";
 
 const Login = () => {
   const [username, setUsername] = useState("");

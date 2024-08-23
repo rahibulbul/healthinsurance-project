@@ -1,7 +1,6 @@
 .emp-header {
-    width: 100%;
+    width: calc(100% - 270px);
     height: 100%;
-    background-color: white;
     border-bottom: solid 1px #696969;
     display: flex;
     align-items: center;
@@ -90,11 +89,11 @@
     height: 550px;
     width: 400px;
     background-color: white;
-    right: 85px;
+    right: 355px;
     top: 52px;
     box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
     overflow: auto;
-    z-index: 1111;
+    z-index: 51111111111;
 
     .notification-header {
         height: 40px;
@@ -145,18 +144,16 @@
     display: block;
 }
 
-.emp-header-button-notification {}
-
 .emp-header-button-user {
     margin-right: 30px;
 
-    .emp-header-message-panel {
+    .emp-header-user-panel {
         display: none;
         position: absolute;
-        height: 316px;
+        height: 325px;
         width: 350px;
         background-color: white;
-        right: 25px;
+        right: 295px;
         top: 52px;
         box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
         overflow: auto;
@@ -246,6 +243,6 @@
     }
 }
 
-.emp-header-message-panel.show {
+.emp-header-user-panel.show {
     display: block;
 }
