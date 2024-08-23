@@ -8,6 +8,9 @@ import CheckIcon from "@mui/icons-material/Check";
 import SyncIcon from "@mui/icons-material/Sync";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box, Typography } from "@mui/material";
+import DashInputText from "../../../../components/dashboard/input/dashinputText/DashInputText";
+import DashInputSelect from "../../../../components/dashboard/input/dashinputSelect/DashInputSelect";
+import DashInputButton from "../../../../components/dashboard/input/dashinputButton/DashInputButton";
 
 const statusStyles = {
   accepted: {
@@ -132,10 +135,37 @@ const columns = [
 
 const Insurance = () => {
   const [activeTab, setActiveTab] = useState("all-insurance");
+  const [showInsuranceFile, setShowInsuranceFile] = useState(false);
 
   const showTab = (tab) => {
     setActiveTab(tab);
   };
+
+  const handleCreateInsuranceClick = () => {
+    setShowInsuranceFile(true);
+  };
+
+  const handleCloseInsuranceFile = () => {
+    setShowInsuranceFile(false);
+  };
+
+  // create insurance panel
+  const [userid, setUsername] = useState("");
+  const handleUserIDChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("User ID:", userid);
+  };
+  const insurancecatgory = [
+    { value: "", label: "Insurance Category" },
+    { value: "Bronze", label: "Bronze" },
+    { value: "Silver", label: "Silver" },
+    { value: "Gold", label: "Gold" },
+    { value: "Platinum", label: "Platinum" },
+  ];
 
   return (
     <div className="emp-base">
@@ -175,9 +205,105 @@ const Insurance = () => {
                 </p>
               </div>
               <div className="open-file">
-                <button className="create-new-insurance">
-                  Crate insurance file
+                <button
+                  className="open-file-btn"
+                  onClick={handleCreateInsuranceClick}
+                >
+                  Create insurance file
                 </button>
+                {showInsuranceFile && (
+                  <>
+                    <div className="overlay"></div>
+                    <div className="insurance-file-panel show">
+                      <div className="title">
+                        <span>Create Insurance File</span>
+                        <i
+                          className="ph ph-x"
+                          onClick={handleCloseInsuranceFile}
+                        />
+                      </div>
+                      <div className="form-body">
+                        <form action="" className="new-insurance-form">
+                          <div className="form-item">
+                            <DashInputText
+                              value={userid}
+                              onChange={handleUserIDChange}
+                              label="Enter userid or phone number"
+                            />
+                          </div>
+                          <div className="form-group">
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Full name"
+                              />
+                            </div>
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Age"
+                              />
+                            </div>
+                          </div>
+                          <div className="form-group">
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Phone"
+                              />
+                            </div>
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Monthly Income"
+                              />
+                            </div>
+                          </div>
+                          <div className="form-group">
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Address"
+                              />
+                            </div>
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Status"
+                              />
+                            </div>
+                          </div>
+                          <div className="form-group">
+                            <div className="form-item">
+                              <DashInputSelect
+                                options={insurancecatgory}
+                                required
+                              />
+                            </div>
+                            <div className="form-item">
+                              <DashInputText
+                                value={userid}
+                                onChange={handleUserIDChange}
+                                label="Status"
+                              />
+                            </div>
+                          </div>
+                          <div className="create-btn">
+                            <div className="btn">
+                              <DashInputButton text="Create insurance file" />
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div className="bottom">

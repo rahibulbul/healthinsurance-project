@@ -6,7 +6,7 @@
     input {
         width: 100%;
         height: 100%;
-        border-bottom: solid 2px #696969;
+        border-bottom: solid 2px #b6b6b6;
         font-size: 18px;
         font-weight: 500;
         outline: none;
@@ -53,7 +53,7 @@
     select {
         width: 100%;
         height: 100%;
-        border-bottom: solid 2px #696969;
+        border-bottom: solid 2px #b6b6b6;
         font-size: 18px;
         font-weight: 500;
         outline: none;
@@ -69,5 +69,30 @@
     select:focus,
     select:valid {
         border-bottom: solid 2px black;
+    }
+}
+
+.dash-input-button {
+    width: 100%;
+    height: 100%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: solid 2px #696969;
+        background: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: #696969;
+        transition: 0.6s;
+        cursor: pointer;
+        font-family: var(--font-poppins);
+    }
+
+    button:hover {
+        color: black;
+        border: solid 2px black;
+        box-shadow: 0px 12px 28px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(255, 255, 255, 0.05) inset;
     }
 }

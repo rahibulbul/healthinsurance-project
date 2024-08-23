@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import InputText from "../../../components/global/inputText/InputText";
 import InputPassword from "../../../components/global/inputPassword/InputPassword";
-import Button from "../../../components/global/Inputbutton/InputButton";
+import InputButton from "../../../components/global/Inputbutton/InputButton";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -64,7 +64,7 @@ const Login = () => {
           </div>
         </div>
         <div className="login-btn">
-          <Button text="Sign In" />
+          <InputButton text="Sign In" />
         </div>
         <div className="not-register">
           <span>Not yet registered?</span>
