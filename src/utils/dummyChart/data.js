@@ -1,4 +1,3 @@
-// Function to generate a random number within a specified range
 const getRandomIncome = (min, max) => {
   const isNegative = Math.random() < 0.2;
   const randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -9,7 +8,6 @@ function generatePhoneNumber() {
   return `074${randomDigits}`;
 }
 
-// Generate random income data
 export const chartNetIncome = {
   icon: "ph-wallet",
   title: "Net Income",
@@ -239,7 +237,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -247,7 +245,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -255,7 +253,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -263,7 +261,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -271,7 +269,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "pending",
   },
   {
@@ -279,7 +277,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -287,7 +285,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "accepted",
   },
   {
@@ -295,7 +293,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "rejected",
   },
   {
@@ -303,7 +301,7 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "pending",
   },
   {
@@ -311,7 +309,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "accepted",
   },
   {
@@ -319,7 +317,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -327,7 +325,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -335,7 +333,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -343,7 +341,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "accepted",
   },
   {
@@ -351,7 +349,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "rejected",
   },
   {
@@ -359,7 +357,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -367,7 +365,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "accepted",
   },
   {
@@ -375,7 +373,7 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -383,7 +381,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -391,7 +389,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -399,7 +397,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "rejected",
   },
   {
@@ -407,7 +405,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "accepted",
   },
   {
@@ -415,7 +413,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "rejected",
   },
   {
@@ -423,7 +421,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -431,7 +429,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "accepted",
   },
   {
@@ -439,7 +437,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "rejected",
   },
   {
@@ -447,7 +445,7 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "pending",
   },
   {
@@ -455,7 +453,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "accepted",
   },
   {
@@ -463,7 +461,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "rejected",
   },
   {
@@ -471,7 +469,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "pending",
   },
   {
@@ -479,7 +477,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "accepted",
   },
   {
@@ -487,7 +485,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -495,7 +493,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "pending",
   },
   {
@@ -503,7 +501,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "accepted",
   },
   {
@@ -511,7 +509,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "rejected",
   },
   {
@@ -519,7 +517,7 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "pending",
   },
   {
@@ -527,7 +525,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -535,7 +533,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "rejected",
   },
   {
@@ -543,7 +541,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "pending",
   },
   {
@@ -551,7 +549,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "accepted",
   },
   {
@@ -559,7 +557,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "rejected",
   },
   {
@@ -567,7 +565,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -575,7 +573,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "accepted",
   },
   {
@@ -583,7 +581,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "rejected",
   },
   {
@@ -591,7 +589,7 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "pending",
   },
   {
@@ -599,7 +597,7 @@ export const dummyAllInsurance = [
     FullName: "Snow Jon",
     age: 14,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "accepted",
   },
   {
@@ -607,7 +605,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Cersei",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -615,7 +613,7 @@ export const dummyAllInsurance = [
     FullName: "Lannister Jaime",
     age: 31,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "pending",
   },
   {
@@ -623,7 +621,7 @@ export const dummyAllInsurance = [
     FullName: "Stark Arya",
     age: 11,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "accepted",
   },
   {
@@ -631,7 +629,7 @@ export const dummyAllInsurance = [
     FullName: "Targaryen Daenerys",
     age: null,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "rejected",
   },
   {
@@ -639,7 +637,7 @@ export const dummyAllInsurance = [
     FullName: "Melisandre",
     age: 150,
     phone: generatePhoneNumber(),
-    category: "bronze",
+    category: "Bronze",
     status: "pending",
   },
   {
@@ -647,7 +645,7 @@ export const dummyAllInsurance = [
     FullName: "Clifford Ferrara",
     age: 44,
     phone: generatePhoneNumber(),
-    category: "silver",
+    category: "Silver",
     status: "accepted",
   },
   {
@@ -655,7 +653,7 @@ export const dummyAllInsurance = [
     FullName: "Frances Rossini",
     age: 36,
     phone: generatePhoneNumber(),
-    category: "platinum",
+    category: "Platinum",
     status: "rejected",
   },
   {
@@ -663,7 +661,14 @@ export const dummyAllInsurance = [
     FullName: "Roxie Harvey",
     age: 65,
     phone: generatePhoneNumber(),
-    category: "gold",
+    category: "Gold",
     status: "pending",
   },
+];
+export const insuranceCategory = [
+  { value: "", label: "Insurance Category" },
+  { value: "Bronze", label: "Bronze" },
+  { value: "Silver", label: "Silver" },
+  { value: "Gold", label: "Gold" },
+  { value: "Platinum", label: "Platinum" },
 ];

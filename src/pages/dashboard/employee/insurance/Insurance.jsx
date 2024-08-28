@@ -3,14 +3,14 @@ import "./insurance.css";
 import EmployeeSidebar from "../../../../components/dashboard/employee/sidebar/Sidebar";
 import EmployeeHeader from "../../../../components/dashboard/employee/header/Header";
 import DataTable from "../../../../components/dashboard/employee/DataTable/DataTable";
-import { dummyAllInsurance } from "../../../../utils/dummyChart/data";
+import {
+  dummyAllInsurance,
+  insuranceCategory,
+} from "../../../../utils/dummyChart/data";
 import CheckIcon from "@mui/icons-material/Check";
 import SyncIcon from "@mui/icons-material/Sync";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box, Typography } from "@mui/material";
-import DashInputText from "../../../../components/dashboard/input/dashinputText/DashInputText";
-import DashInputSelect from "../../../../components/dashboard/input/dashinputSelect/DashInputSelect";
-import DashInputButton from "../../../../components/dashboard/input/dashinputButton/DashInputButton";
 
 const statusStyles = {
   accepted: {
@@ -77,7 +77,7 @@ const columns = [
     field: "id",
     headerName: "ID",
     width: 100,
-    align: "left",
+    align: "center",
     headerAlign: "center",
   },
   {
@@ -94,7 +94,7 @@ const columns = [
     type: "number",
     width: 100,
     editable: true,
-    align: "left",
+    align: "center",
     headerAlign: "center",
   },
   {
@@ -102,7 +102,8 @@ const columns = [
     headerName: "username",
     width: 200,
     sortable: false,
-    valueGetter: (value, row) => `@${row.FullName.replace(/\s+/g, "")}`,
+    valueGetter: (value, row) =>
+      `@${row.FullName.replace(/\s+/g, "").toLowerCase()}`,
     align: "left",
     headerAlign: "center",
   },
@@ -112,7 +113,7 @@ const columns = [
     type: "number",
     width: 200,
     editable: true,
-    align: "left",
+    align: "center",
     headerAlign: "center",
   },
   {
@@ -120,7 +121,7 @@ const columns = [
     headerName: "Category",
     width: 200,
     editable: true,
-    align: "left",
+    align: "center",
     headerAlign: "center",
   },
   {
@@ -148,24 +149,6 @@ const Insurance = () => {
   const handleCloseInsuranceFile = () => {
     setShowInsuranceFile(false);
   };
-
-  // create insurance panel
-  const [userid, setUsername] = useState("");
-  const handleUserIDChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("User ID:", userid);
-  };
-  const insurancecatgory = [
-    { value: "", label: "Insurance Category" },
-    { value: "Bronze", label: "Bronze" },
-    { value: "Silver", label: "Silver" },
-    { value: "Gold", label: "Gold" },
-    { value: "Platinum", label: "Platinum" },
-  ];
 
   return (
     <div className="emp-base">
@@ -224,80 +207,24 @@ const Insurance = () => {
                       </div>
                       <div className="form-body">
                         <form action="" className="new-insurance-form">
-                          <div className="form-item">
-                            <DashInputText
-                              value={userid}
-                              onChange={handleUserIDChange}
-                              label="Enter userid or phone number"
-                            />
+                          <div className="form-item"></div>
+                          <div className="form-group">
+                            <div className="form-item"></div>
+                            <div className="form-item"></div>
                           </div>
                           <div className="form-group">
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Full name"
-                              />
-                            </div>
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Age"
-                              />
-                            </div>
+                            <div className="form-item"></div>
+                            <div className="form-item"></div>
                           </div>
                           <div className="form-group">
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Phone"
-                              />
-                            </div>
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Monthly Income"
-                              />
-                            </div>
+                            <div className="form-item"></div>
                           </div>
                           <div className="form-group">
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Address"
-                              />
-                            </div>
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Status"
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group">
-                            <div className="form-item">
-                              <DashInputSelect
-                                options={insurancecatgory}
-                                required
-                              />
-                            </div>
-                            <div className="form-item">
-                              <DashInputText
-                                value={userid}
-                                onChange={handleUserIDChange}
-                                label="Status"
-                              />
-                            </div>
+                            <div className="form-item"></div>
+                            <div className="form-item"></div>
                           </div>
                           <div className="create-btn">
-                            <div className="btn">
-                              <DashInputButton text="Create insurance file" />
-                            </div>
+                            <div className="btn"></div>
                           </div>
                         </form>
                       </div>

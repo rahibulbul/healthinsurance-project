@@ -43,13 +43,12 @@ const Header = () => {
     useState(false);
 
   // Message Panel Hide and Show
-  const [isMessageDropdownVisible, setIsMessageDropdownVisible] =
-    useState(false);
+  const [isUserDropdownVisible, setIsMessageDropdownVisible] = useState(false);
 
   const handleNotificationIconClick = (event) => {
     event.stopPropagation();
     setIsNotificationDropdownVisible((prev) => !prev);
-    if (isMessageDropdownVisible) {
+    if (isUserDropdownVisible) {
       setIsMessageDropdownVisible(false);
     }
   };
@@ -64,8 +63,8 @@ const Header = () => {
 
   const handleOutsideClick = useCallback(() => {
     if (isNotificationDropdownVisible) setIsNotificationDropdownVisible(false);
-    if (isMessageDropdownVisible) setIsMessageDropdownVisible(false);
-  }, [isNotificationDropdownVisible, isMessageDropdownVisible]);
+    if (isUserDropdownVisible) setIsMessageDropdownVisible(false);
+  }, [isNotificationDropdownVisible, isUserDropdownVisible]);
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
@@ -102,21 +101,30 @@ const Header = () => {
         <i className="ph ph-house" onClick={handleDashboardHome}></i>
         <span> ❯ {breadcrumb}</span>
       </div>
-      <div className="emp-header-buttons">
-        <div className="emp-header-button-notification">
-          <div className="emp-header-button notifications">
-            <button onClick={handleNotificationIconClick}>
-              <i className="ph ph-bell"></i>
-            </button>
-            {unreadCount > 0 && <span>{unreadCount}</span>}
-          </div>
+      <div className="emp-header-icon">
+        <div className="emp-notify-icons">
+          <i
+            className="ph ph-bell emp-notify-icon"
+            onClick={handleNotificationIconClick}
+          ></i>
+          {unreadCount > 0 && (
+            <span className="emp-dash-notification-count">{unreadCount}</span>
+          )}
           <div
-            className={`emp-header-notification-panel ${
+            className={`emp-dash-notification-panel ${
               isNotificationDropdownVisible ? "show" : ""
             }`}
           >
-            <div className="notification-header">
-              <h3>Notification</h3>
+            <div className="emp-dash-notification-panel-top">
+              <div className="emp-dash-notification-panel-title">
+                Notification
+              </div>
+              <button
+                type="button"
+                className="emp-dash-notification-panel-mark-read"
+              >
+                Mark all as read
+              </button>
             </div>
             <div className="notification-body">
               {notifications.map((notification) => (
@@ -141,18 +149,17 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="emp-header-button-user">
-          <div className="emp-header-button message">
-            <button onClick={handleUserIconClick}>
-              <i className="ph ph-user"></i>
-            </button>
-          </div>
+
+        <div className="emp-notify-icons">
+          <i
+            className="ph ph-user emp-notify-icon"
+            onClick={handleUserIconClick}
+          ></i>
           <div
-            className={`emp-header-user-panel ${
-              isMessageDropdownVisible ? "show" : ""
-            }`}
+            className={`emp-dash-user-panel
+             ${isUserDropdownVisible ? "show" : ""}`}
           >
-            <div className="user-details">
+            <div className="emp-dash-user-details">
               <div className="user-img">
                 <img src={userImage} alt="userimgae" />
               </div>
@@ -177,7 +184,7 @@ const Header = () => {
                 </span>
               </div>
             </div>
-            <div className="user-settings">
+            <div className="emp-dash-user-settings">
               <ul className="user-settings-lists">
                 <li className="user-settings-list">
                   <Link to="#" className="user-settings-links">

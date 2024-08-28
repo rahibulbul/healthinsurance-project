@@ -9,7 +9,7 @@
     .register-left {
         flex: 2;
         width: 100%;
-        height: 100%;
+        /* height: 100vh; */
 
         h1 {
             text-align: center;
@@ -20,6 +20,95 @@
             text-align: center;
             font-size: 18px;
             font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        .form-group-name {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            .form-title {
+                width: 250px;
+
+                .input-error {
+                    color: red;
+                    margin-left: 20px;
+                    font-weight: 600;
+                    display: none;
+                }
+            }
+
+            .form-full-name {
+                flex: 1;
+
+                .input-error {
+                    color: red;
+                    margin-left: 20px;
+                    font-weight: 600;
+                    display: none;
+                }
+            }
+        }
+
+        .form-group {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            margin-top: 35px;
+
+            .form-item {
+                flex: 1;
+                width: 100%;
+                height: 50px;
+
+                .input-error {
+                    color: red;
+                    margin-left: 20px;
+                    font-weight: 600;
+                    display: none;
+                }
+            }
+        }
+
+        .input-error.show {
+            display: block;
+        }
+
+        .username-text {
+            .username-suggestion {
+                display: none;
+                margin-left: 30px;
+                font-size: 14px;
+                font-family: 800;
+
+                .username-list {
+                    color: blue;
+                    font-weight: 600;
+                }
+            }
+
+            .username-suggestion.show {
+                display: block;
+            }
+        }
+
+        .form-button {
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn {
+                width: 350px;
+                height: 50px;
+            }
         }
     }
 
@@ -52,4 +141,53 @@
             margin-top: 5px;
         }
     }
+}
+
+.date-item {
+    flex: 1;
+    /* Ensure it grows to fill the space */
+    width: 100% !important;
+    /* Force width to 100% */
+    box-sizing: border-box;
+    /* Ensure padding and borders are included in width */
+}
+
+.date-item .custom-datepicker-input .MuiOutlinedInput-root {
+    width: 100% !important;
+    /* Force the input width to 100% */
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #696969;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Ensure full width usage */
+}
+
+.date-item .custom-datepicker-input .MuiInputBase-input {
+    padding: 0;
+    padding-left: 10px;
+    width: 100% !important;
+    /* Force input field width to 100% */
+    height: 100%;
+    line-height: 50px;
+    color: black;
+    font-size: 18px;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* Ensure the padding is included in the width */
+}
+
+.date-item .custom-datepicker-input .MuiInputAdornment-root {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.date-item .custom-datepicker-input fieldset {
+    border: none;
 }

@@ -47,202 +47,232 @@
     color: black;
 }
 
-.emp-header-button {
+.emp-header-icon {
+    display: flex;
+    align-items: center;
+}
+
+.emp-notify-icons {
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.emp-notify-icon {
+    border: solid 1px #a4a4a4;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
     position: relative;
 
-    button {
-        border: solid 2px #708090;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        background-color: #ffffff;
-        transition: 0.5s;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #708090;
-
-        &:hover {
-            background-color: #a2d5eb;
-            border: solid 2px transparent;
-            color: black;
-        }
-    }
-
-    span {
-        position: absolute;
-        right: -10px;
-        top: -5px;
-        background-color: red;
-        color: white;
-        border-radius: 50%;
-        padding: 3px 6px;
-        font-size: 12px;
-        font-weight: 700;
+    &:hover {
+        background-color: #5da4e2;
+        color: white !important;
+        border: solid 1px transparent;
     }
 }
 
-.emp-header-notification-panel {
+.emp-dash-notification-panel {
     display: none;
     position: absolute;
-    height: 550px;
-    width: 400px;
+    width: 450px;
+    height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+    right: 0;
+    top: 50px;
     background-color: white;
-    right: 355px;
-    top: 52px;
-    box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
-    overflow: auto;
-    z-index: 51111111111;
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
 
-    .notification-header {
-        height: 40px;
-        border-bottom: solid 1px #a8a8a8;
+.emp-dash-notification-panel.show {
+    display: block;
+}
+
+.emp-dash-notification-panel.show~.emp-notify-icon {
+    background-color: #0088FE;
+}
+
+.emp-dash-notification-panel-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: fixed;
+    width: 450px;
+    background-color: white;
+    border-bottom: solid 1px #696969;
+}
+
+.emp-dash-notification-panel-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.emp-dash-notification-panel-mark-read {
+    background: none;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: var(--font-Poppins);
+    color: #696969;
+    transition: 0.6s;
+
+    &:hover {
+        color: black;
+    }
+}
+
+
+.notification-body {
+    cursor: pointer;
+    margin-top: 50px;
+
+    .notification-item {
+        padding: 10px 20px;
         display: flex;
-        align-items: center;
-        padding: 20px;
+        flex-direction: column;
+        gap: 3px;
     }
 
-    .notification-body {
-        cursor: pointer;
+    .notification-from {
+        font-size: 14px;
+        font-weight: 600;
+    }
 
-        .notification-item {
-            padding: 10px 20px;
-        }
+    .notification-message {
+        font-size: 12px;
+        font-weight: 400;
+    }
 
-        .notification-from {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .notification-message {
-            font-size: 14px;
-        }
-
-        .notification-timestamp {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-        }
+    .notification-timestamp {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
     }
 
     .notification-item:hover {
-        background-color: #c9e0ed;
+        background-color: #C9E0ED;
     }
 }
 
+
 .notification-item.read {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 .notification-item.unread {
-    background-color: #b4d3e0;
+    background-color: #cad5d9;
     font-weight: bold;
 }
 
-.emp-header-notification-panel.show {
+.emp-dash-notification-count {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    background-color: #D63C3C;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.emp-dash-user-panel {
+    display: none;
+    position: absolute;
+    width: 350px;
+    max-height: 600px;
+    overflow-y: auto;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
+
+.emp-dash-user-panel.show {
     display: block;
 }
 
-.emp-header-button-user {
-    margin-right: 30px;
+.emp-dash-user-details {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #a4a4a4;
 
-    .emp-header-user-panel {
-        display: none;
-        position: absolute;
-        height: 325px;
-        width: 350px;
-        background-color: white;
-        right: 295px;
-        top: 52px;
-        box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
-        overflow: auto;
-        z-index: 11111;
+    img {
+        width: 120px;
+        height: 110px;
+        margin-left: 20px;
+    }
 
-        .user-details {
-            display: flex;
-            align-items: center;
-            border-bottom: solid 1px #a4a4a4;
+    .user-name-tag {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
 
-            img {
-                width: 120px;
-                height: 110px;
-                margin-left: 20px;
-            }
-
-            .user-name-tag {
-                display: flex;
-                flex-direction: column;
-                margin-left: 30px;
-
-                .emp-full-name {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-
-                .emp-user-tag {
-                    font-size: 14px;
-                    font-weight: 500;
-                }
-
-                .emp-user-name {
-                    display: flex;
-                    align-items: center;
-                    font-size: 12px;
-                    font-weight: 400;
-                    cursor: pointer;
-                    color: black;
-
-                    i {
-                        font-size: 16px;
-                        margin-left: 5px;
-                        cursor: pointer;
-                        color: #696969;
-
-                        &:hover {
-                            color: black;
-                        }
-                    }
-                }
-            }
+        .emp-full-name {
+            font-size: 20px;
+            font-weight: 600;
         }
 
-        .user-settings {
+        .emp-user-tag {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .emp-user-name {
             display: flex;
-            flex-direction: row;
-            width: 100%;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 400;
+            cursor: pointer;
+            color: black;
 
-            ul {
-                width: 100%;
-
-            }
-
-            .user-settings-links {
-                display: block;
-                padding: 15px 12px;
-                display: flex;
-                align-items: center;
-                border-left: solid 5px transparent;
+            i {
+                font-size: 16px;
+                margin-left: 5px;
+                cursor: pointer;
                 color: #696969;
-                font-weight: 600;
-                transition: all 0.3s ease-in-out;
 
                 &:hover {
-                    background-color: #b4d3e0;
-                    border-left: solid 5px #696969;
                     color: black;
-                    padding: 15px 20px;
-                }
-
-                i {
-                    margin-right: 15px;
-                    transition: 0.6s;
                 }
             }
         }
     }
 }
 
-.emp-header-user-panel.show {
-    display: block;
+.emp-dash-user-settings {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    ul {
+        width: 100%;
+
+    }
+
+    .user-settings-links {
+        display: block;
+        padding: 15px 12px;
+        display: flex;
+        align-items: center;
+        border-left: solid 5px transparent;
+        color: #696969;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: #C9E0ED;
+            border-left: solid 5px #696969;
+            color: black;
+            padding: 15px 20px;
+        }
+
+        i {
+            margin-right: 15px;
+            transition: 0.6s;
+        }
+    }
 }

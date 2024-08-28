@@ -4,6 +4,7 @@
     "areachartbox",
     "Cersei",
     "Daenerys",
+    "datepicker",
     "fullname",
     "healthinsurance",
     "Inputbutton",
@@ -14,8 +15,16 @@
     "piechart",
     "piechartbox",
     "predeploy",
+    "setemail",
+    "setfullname",
+    "setoccupation",
+    "setpassword",
+    "setphone",
+    "setre",
+    "setusername",
     "signup",
     "Targaryen",
-    "userid"
+    "userid",
+    "userimgae"
   ]
 }
