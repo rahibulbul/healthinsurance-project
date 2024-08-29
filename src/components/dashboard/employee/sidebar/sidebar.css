@@ -1,4 +1,4 @@
-.emp-sidebar {
+/* .emp-sidebar {
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,8 +17,12 @@
         align-items: center;
         padding-left: 25px;
         border-bottom: solid 1px #696969;
+        position: fixed;
+        background-color: white;
+        width: 270px;
 
         .emp-logo-links {
+            text-decoration: none;
             display: flex;
             align-items: center;
             font-size: 25px;
@@ -41,6 +45,7 @@
     ul {
         padding: 0 0;
         flex: 1 1 auto;
+        margin-top: 60px;
 
         li {
             list-style: none;
@@ -84,5 +89,108 @@
             }
         }
 
+    }
+} */
+
+.emp-sidebar {
+    width: 100%;
+    height: 100vh;
+    /* Take full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensure the bottom sticks to the bottom */
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11), 0 8px 16px rgba(0, 0, 0, 0.11);
+
+    .emp-logo {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        border-bottom: solid 1px #696969;
+        position: fixed;
+        background-color: white;
+        width: 270px;
+
+        .emp-logo-links {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            color: black;
+            font-weight: 600;
+            transition: 0.6s ease-in-out;
+            cursor: pointer;
+
+            i {
+                font-size: 25px;
+                margin-right: 20px;
+            }
+        }
+
+        .emp-logo-links:hover {
+            color: black;
+        }
+    }
+
+    .emp-sidebar-content {
+        flex: 1 1 auto;
+        /* This takes up remaining space */
+        padding-top: 60px;
+    }
+
+    .emp-sidebar-bottom {
+        /* Stick to the bottom */
+        flex-shrink: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            transition: 0.6s;
+
+            .emp-links {
+                padding: 12px 11px;
+                white-space: nowrap;
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                color: #696969;
+                text-decoration: none;
+                transition: background-color 0.1s ease-in-out, color 0.2s ease-in-out, border-left-color 0.1s ease-in-out, padding 0.4s ease-in-out;
+                border-left: solid 5px transparent;
+                margin-left: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+                    background: #c9e0ed;
+                    color: black;
+                    border-left: solid 5px #696969;
+                    padding: 12px 25px;
+                }
+
+                i {
+                    font-size: 20px;
+                    margin-right: 20px;
+                    transition: 0.6s;
+                }
+            }
+
+            .emp-sidebar-active {
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+                background: #c9e0ed;
+                color: black;
+                border-left: solid 5px #696969;
+                padding: 12px 25px;
+            }
+        }
     }
 }

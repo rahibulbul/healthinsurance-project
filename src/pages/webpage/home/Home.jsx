@@ -3,7 +3,7 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div className="container debug-screen">
+    <div className="web-container debug-screen">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
         veritatis, aut illo asperiores eius hic eveniet temporibus, enim quo

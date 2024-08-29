@@ -6,14 +6,14 @@ const Sidebar = () => {
   const location = useLocation();
   return (
     <aside className="emp-sidebar">
+      <div className="emp-logo">
+        <Link to="#" className="emp-logo-links">
+          <i class="ph ph-squares-four"></i>
+          square
+        </Link>
+      </div>
       <div className="emp-sidebar-content">
         <ul>
-          <div className="emp-logo">
-            <Link to="#" className="emp-logo-links">
-              <i class="ph ph-squares-four"></i>
-              square
-            </Link>
-          </div>
           <li>
             <Link
               to="/employeedashboard"

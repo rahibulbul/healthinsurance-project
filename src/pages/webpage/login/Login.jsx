@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="web-container">
       <div className="login">
         <div className="login-title">
           <h2>Hello there!</h2>
@@ -148,6 +148,12 @@ const Login = () => {
             </div>
             <div className="form-login-button">
               <input type="submit" value="Sign In" className="loginButton" />
+            </div>
+            <div className="login-form-register-link">
+              <span>Don't have account?</span>
+              <Link to="/registration" className="login-register">
+                Click here to registration
+              </Link>
             </div>
           </form>
         </div>

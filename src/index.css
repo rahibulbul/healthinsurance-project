@@ -78,7 +78,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    /* font-family: var(--font-Montserrat); */
 }
 
 body {
@@ -88,8 +87,8 @@ body {
     max-height: 100vh;
 }
 
-.container {
-    padding: 120px 100px 0px 100px;
+.web-container {
+    padding: 20px 100px 0px 100px;
     width: 100vw;
     max-width: 100vw;
     height: 100vh;
